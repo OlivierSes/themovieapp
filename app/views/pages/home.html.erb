@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="wrapper">
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path "logo.png" %>);">
+    <div class="banner-content">
+      <h1>The Movie App</h1>
+      <p>Find out what you're gonna watch tonight</p>
+      <%= form_tag movies_path, method: "get", class: "form-inline" do %>
+      <%= text_field_tag :name, "", class: "form-control", placeholder: "Title" %>
+      <%= text_field_tag :genre, "", class: "form-control", placeholder: "Genre" %>
+      <%= submit_tag 'Check it out', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+    <div class="btn btn-primary">
+      <%= link_to "Check-in", new_user_session_path %>
+    </div>
+  </div>
+</div>
+
+<% if user_signed_in? %>
+  <div>
+    <%= link_to "see your friends", new_user_session_path %>
+  </div>
+<% end %>
