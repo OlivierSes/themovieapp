@@ -13,10 +13,14 @@
       <%= link_to "Check-in", new_user_session_path %>
     </div>
   </div>
-</div>
+</divgit >
 
 <% if user_signed_in? %>
   <div>
-    <%= link_to "see your friends", new_user_session_path %>
+    <%= link_to "Check out your friends", user_friendships_path(current_user.id) %>
+  </div>
+<% else %>
+  <div>
+  <%= link_to "Sign-in", new_user_session_path %>
   </div>
 <% end %>
