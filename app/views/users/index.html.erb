@@ -1,0 +1,12 @@
+<ul>
+  <% @users.each do |user| %>
+    <% unless user == current_user %>
+      <% unless current_user.friends_with?(user) %>
+        <li><%= user.name %></li>
+        <div class= "btn btn-primary">
+          <%= link_to "Add Friend", friendships_path(user), method: :post %>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</ul>

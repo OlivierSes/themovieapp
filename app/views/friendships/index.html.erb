@@ -1,0 +1,17 @@
+<h1>Friendships#index</h1>
+
+<%= current_user.email%>
+<%= current_user.name%>
+<%= current_user.id%>
+
+<% @friend_array.each do |person| %>
+  <p><%= person.friend.name %></p>
+  <div>
+    <%= link_to 'Delete Friend', friendship_path(person.id), method: :delete %>
+  </div>
+<% end %>
+  <div class="btn btn-primary">
+    <%= link_to 'Add a new friend', users_path %>
+  </div>
+
+
