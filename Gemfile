@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.4'
 
+
 gem 'devise'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
@@ -17,6 +18,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'has_friendship', '~> 1.1', '>= 1.1.1'
+gem 'themoviedb'
 
 group :development, :test do
   gem 'better_errors'
