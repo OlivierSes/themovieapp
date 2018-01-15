@@ -13,7 +13,7 @@
       <%= link_to "Check-in", new_user_session_path %>
     </div>
   </div>
-</divgit >
+</div >
 
 <% if user_signed_in? %>
   <div>
@@ -24,3 +24,13 @@
   <%= link_to "Sign-in", new_user_session_path %>
   </div>
 <% end %>
+
+  <%= form_tag movies_path, method: :get do %>
+  <%=  search_field_tag 'search', params[:search], class: "search-bar", placeholder: "Look for a movie" %>
+      <i class='fa fa-search', type='submit', style="color: rgb(220,220,220)"></i>
+  <% end %>
+
+
+<div>
+    <%= link_to "Find a movie", movies_path %>
+</div>
