@@ -1,7 +1,7 @@
 Rails.application.configure do
   config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
   # Settings specified here will take precedence over those in config/application.rb.
-  Tmdb::Api.key("KEY_HERE")
+  Tmdb::Api.key("f25595ff9531ef015539c3e29c00452c")
   # Code is not reloaded between requests.
   config.cache_classes = true
 
